@@ -28,17 +28,30 @@ a = (2, 7)   # <-- x,y coordinates stored in tuples
 b = (-14, 72)
 
 # Prints "Distance is 66.94"
-print("Distance is: {:.2f}".format(dist(a, b)))
+#print("Distance is: {:.2f}".format(dist(a, b)))
 
 
 
 # Write a function `print_tuple` that prints all the values in a tuple
 
-# YOUR CODE HERE
+# YOUR CODE(( HERE
+def print_tuple(x):
+    for element in x:
+        print(element)
+    
 
 t = (1, 2, 5, 7, 99)
 print_tuple(t)  # Prints 1 2 5 7 99, one per line
 
 # Declare a tuple of 1 element then print it
-u = (1)  # What needs to be added to make this work?
+u = (1,)  # What needs to be added to make this work?
 print_tuple(u)
+
+
+"""
+Your tuple keys that just have a single int in them are
+being parsed as an int instead of a tuple. So when you try to for item in age - 
+you're trying to iterate through a non-iterable. Use lists [4] or use a comma (4,), 
+and it'll do the trick:
+https://stackoverflow.com/questions/17999752/int-object-is-not-iterable
+"""

@@ -12,6 +12,12 @@ z = "I like turtles!"
 # y, and z:
 # x is 10, y is 2.25, z is "I like turtles!"
 
-# Use the 'format' string method to print the same thing
+#string modulo operator %
+print("X: %4d ,Z: %17s, Y: %7.2f " % (x,z,y) )
 
+# Use the 'format' string method to print the same thing
+print("X: {0:4d}, Z: {1:17s}, Y: {2:7.2f}".format(10, "I like turtles", 2.24552))
+
+#formatted literals strings
 # Finally, print the same thing using an f-string
+print(f"X:{x},Y:{y},Z:{z}")
